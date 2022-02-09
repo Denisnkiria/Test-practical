@@ -1,9 +1,9 @@
 <?php
 
-namespace Ptondereau\PackMe;
+namespace Testpractical;
 
 use Illuminate\Support\Str;
-use Ptondereau\PackMe\Validators\Validator;
+use Testpractical\Validators\Validator;
 
 /**
  * Class Package.
@@ -81,12 +81,12 @@ class Package
      * @param null|string $author
      * @param null|string $destination
      */
-    public function __construct($name = null, $author = null, $destination = null, Validator $validator = null)
+    public function __construct($productname = null, $beginningbalance = null, $Quantitydispensed = null,  $closingbalance = null)
     {
-        $this->validator = $validator ?: new Validator();
-        $this->name = $name;
-        $this->author = $author;
-        $this->destination = $destination;
+        
+        $this->name = $beginningbalance;
+        $this->author = $Quantitydispensed;
+        $this->destination = $closingbalance;
     }
 
     /**
